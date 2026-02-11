@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rain Forecast Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-slate-900 text-white max-w-2xl w-full rounded-3xl shadow-2xl p-10 border border-slate-700">
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="text-6xl mb-4">🌧️</div>
+            <h1 class="text-4xl font-extrabold tracking-tight text-blue-400">
+                Rain Expected Tomorrow
+            </h1>
+            <p class="text-slate-400 mt-2">
+                AI Weather Intelligence Report
+            </p>
+        </div>
+
+        <!-- Probability Card -->
+        <div class="bg-slate-800 rounded-2xl p-8 text-center mb-8 border border-slate-700">
+            <p class="uppercase text-sm tracking-widest text-slate-400 mb-2">
+                Predicted Probability
+            </p>
+            <div class="text-6xl font-extrabold text-blue-400">
+                {{ probability }}
+            </div>
+        </div>
+
+        <!-- Advisory -->
+        <div class="bg-blue-950/40 rounded-2xl p-6 border border-blue-800">
+            <h2 class="text-xl font-bold text-blue-300 mb-4">
+                Recommended Agricultural Actions
+            </h2>
+
+            <ul class="space-y-3 text-slate-300">
+                <li>• Suspend irrigation cycles immediately</li>
+                <li>• Avoid pesticide or fertilizer spraying</li>
+                <li>• Ensure proper drainage to prevent waterlogging</li>
+                <li>• Delay harvesting operations</li>
+            </ul>
+        </div>
+
+        <!-- Button -->
+        <div class="mt-10 text-center">
+            <a href="/" 
+               class="bg-blue-500 hover:bg-blue-600 transition duration-300 px-8 py-3 rounded-xl font-semibold shadow-lg">
+                Run New Prediction
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

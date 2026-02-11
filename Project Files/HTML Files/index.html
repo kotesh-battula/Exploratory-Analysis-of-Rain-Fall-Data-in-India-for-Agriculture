@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AgroRain - Smart Rain Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-600 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white/10 backdrop-blur-lg shadow-2xl rounded-3xl p-10 w-full max-w-4xl border border-white/20">
+        
+        <h1 class="text-4xl font-extrabold text-white text-center mb-2">
+            🌧️ AgroRain Intelligence
+        </h1>
+        <p class="text-center text-blue-100 mb-8">
+            AI-Powered Rainfall Prediction for Smart Agriculture
+        </p>
+
+        <form action="/" method="post" class="grid md:grid-cols-2 gap-6">
+
+            <div>
+                <label class="block text-white font-medium mb-1">Location</label>
+                <input type="text" name="Location" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Min Temperature (°C)</label>
+                <input type="number" step="0.1" name="MinTemp" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Max Temperature (°C)</label>
+                <input type="number" step="0.1" name="MaxTemp" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Rainfall (mm)</label>
+                <input type="number" step="0.1" name="Rainfall" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Humidity (3PM %)</label>
+                <input type="number" name="Humidity3pm" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Pressure (hPa)</label>
+                <input type="number" step="0.1" name="Pressure3pm" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Wind Gust Speed (km/h)</label>
+                <input type="number" name="WindGustSpeed" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Rain Today</label>
+                <select name="RainToday"
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Day</label>
+                <input type="number" name="Day" min="1" max="31" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div>
+                <label class="block text-white font-medium mb-1">Month</label>
+                <input type="number" name="Month" min="1" max="12" required
+                    class="w-full p-3 rounded-xl bg-white/20 text-white border border-white/30 focus:ring-2 focus:ring-blue-300">
+            </div>
+
+            <div class="md:col-span-2 mt-6">
+                <button type="submit"
+                    class="w-full bg-white text-blue-900 font-bold py-4 rounded-xl hover:scale-105 transition duration-300 shadow-xl">
+                    Predict Rainfall
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
